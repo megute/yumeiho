@@ -426,15 +426,17 @@ a {
   align-self: flex-end;
 }
 
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
 .reviews__slider {
   margin-top: 55px;
   position: relative;
-}
-.reviews__slider .slick-list {
-  overflow: hidden;
-}
-.reviews__slider .slick-track {
-  display: flex;
 }
 .reviews__slider .slick-arrow {
   font-size: 0;
