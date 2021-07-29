@@ -5,6 +5,9 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
-    $('.reviews__slider').slick();
+const swiper = new Swiper('.reviews__cont', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 });

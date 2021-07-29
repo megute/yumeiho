@@ -2,10 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slick.css">
     <title>Юмейхо терапевт в Киеве</title>
 </head>
 <body>
@@ -137,6 +136,7 @@
                                 <h4>Массаж Юмейхо</h4>
                                 <p>Японский массаж с МЯГКОЙ мануальной терапией. Лучшие массажные техники востока в одном массаже. Проработка всего тела от пальцев рук до пальцев ног.</p>
                                 <p class="time">Время сеанса: 1 час</p>
+                                <p class="price">Цена: 600 ₴</p>
                                 <div class="button__row">
                                     <div class="button">
                                         <a href="#">Записаться</a>
@@ -150,6 +150,7 @@
                                 <h4>Тейпирование</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna ornare a iaculis nunc. Pulvinar dui, quisque ac laoreet. Iaculis eu in lectus pharetra viverra turpis.</p>
                                 <p class="time">Время сеанса: 1 час</p>
+                                <p class="price">Цена: 600 ₴</p>
                                 <div class="button__row">
                                     <div class="button">
                                         <a href="#">Записаться</a>
@@ -163,6 +164,7 @@
                                 <h4>Конультация</h4>
                                 <p>По описанию Вашего состояния найдём причину и оптимальный план для устранения дискомфорта, боли и восстановления отличного самочувствия.</p>
                                 <p class="time">Время сеанса: 30 мин</p>
+                                <p class="price">Цена: 600 ₴</p>
                                 <div class="button__row">
                                     <div class="button">
                                         <a href="#">Записаться</a>
@@ -176,9 +178,9 @@
             <section id="reviews" class="reviews">
                 <div class="container">
                     <h2>Отзывы</h2>
-                    <div class="reviews__cont">
-                        <div class="reviews__slider slick-list">
-                            <div class="reviews__block">
+                    <div class="reviews__cont swiper-container">
+                        <div class="reviews__slider swiper-wrapper">
+                            <div class="reviews__block swiper-slide">
                                 <div class="client__img">
                                 </div>                          
                                 <div class="review">
@@ -192,7 +194,7 @@
     
                                 </div>
                             </div>
-                            <div class="reviews__block">
+                            <div class="reviews__block swiper-slide">
                                 <div class="client__img">
                                 </div>                           
                                 <div class="review">
@@ -206,7 +208,7 @@
     
                                 </div>
                             </div>
-                            <div class="reviews__block">
+                            <div class="reviews__block swiper-slide">
                                 <div class="client__img">
                                 </div>                           
                                 <div class="review">
@@ -219,7 +221,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </section>
@@ -246,8 +250,8 @@
             </section>
         </div>
     </div>
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*Обнуление*/
 * {
   padding: 0;
@@ -127,14 +126,6 @@ a {
   color: #fff;
 }
 
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
 /* ----------------- */
 .header {
   position: relative;
@@ -249,8 +240,8 @@ a {
 .srv__item h3 {
   margin-bottom: 12px;
 }
-.srv__item .button {
-  margin-top: 25px;
+.srv__item p {
+  min-height: 100px;
 }
 .srv__item a {
   font-size: 18px;
@@ -304,7 +295,7 @@ a {
   top: -27px;
   width: 500px;
   height: 500px;
-  background: url(../img/ruslan1.png) no-repeat;
+  /* background: url(../img/ruslan1.png) no-repeat; */
   background-size: 100%;
 }
 
@@ -361,7 +352,7 @@ a {
 }
 
 .prices__block {
-  width: 280px;
+  max-width: 280px;
   background: #F4FFFE;
   padding: 0 0 30px;
   border-radius: 7px;
@@ -377,13 +368,14 @@ a {
 .prices__block p {
   font-size: 15px;
 }
-.prices__block .time {
-  margin: 10px 0 0 0;
+.prices__block .time, .prices__block .price {
+  margin: 9px 0 0 0;
   font-size: 17px;
   color: #0A5954;
 }
 .prices__block .button {
-  margin: 25px 0 0;
+  position: absolute;
+  bottom: 0;
 }
 .prices__block .button a {
   background: #0A5954;
@@ -397,7 +389,9 @@ a {
 }
 
 .prices__block__content {
+  height: 215px;
   padding: 0 16px 0;
+  position: relative;
 }
 
 /* ----------------- */
@@ -426,52 +420,12 @@ a {
   align-self: flex-end;
 }
 
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
 .reviews__slider {
   margin-top: 55px;
-  position: relative;
 }
-.reviews__slider .slick-arrow {
-  font-size: 0;
-  position: absolute;
-}
-.reviews__slider .slick-arrow::before, .reviews__slider .slick-arrow::after {
-  content: "";
-  position: absolute;
-  top: calc(50%);
-  width: 40px;
-  height: 2px;
-  background: #fff;
-}
-.reviews__slider .slick-arrow.slick-prev {
-  left: 0;
-  z-index: 3;
-  top: calc(50%);
-}
-.reviews__slider .slick-arrow.slick-prev::before {
-  transform: rotate(-45deg);
-}
-.reviews__slider .slick-arrow.slick-prev::after {
-  transform: rotate(45deg);
-  top: 27px;
-}
-.reviews__slider .slick-arrow.slick-next {
-  right: 35px;
-  top: calc(50%);
-}
-.reviews__slider .slick-arrow.slick-next::before {
-  transform: rotate(45deg);
-}
-.reviews__slider .slick-arrow.slick-next::after {
-  transform: rotate(-45deg);
-  top: 27px;
+
+.swiper-container {
+  display: flex;
 }
 
 .review {
@@ -599,9 +553,6 @@ a {
     max-width: 720px;
   }
 
-  .offer {
-    margin-top: 80px;
-  }
   .offer h1 {
     font-size: 55px;
   }
@@ -621,37 +572,14 @@ a {
 
   .prices__block {
     margin: 0 0 20px 0;
+    max-width: 30%;
   }
 
   .reviews {
     padding-bottom: 80px;
   }
 
-  .reviews__slider .slick-arrow::before, .reviews__slider .slick-arrow::after {
-    width: 20px;
-    height: 2px;
-  }
-  .reviews__slider .slick-arrow.slick-prev {
-    top: auto;
-    bottom: -20px;
-    left: calc(50% - 50px);
-  }
-  .reviews__slider .slick-arrow.slick-prev::after {
-    top: 13px;
-  }
-  .reviews__slider .slick-arrow.slick-next {
-    top: auto;
-    bottom: -20px;
-    right: calc(50% - 50px);
-  }
-  .reviews__slider .slick-arrow.slick-next::before {
-    transform: rotate(45deg);
-  }
-  .reviews__slider .slick-arrow.slick-next::after {
-    transform: rotate(-45deg);
-    top: 13px;
-  }
-
+  
   .contacts__wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -659,12 +587,16 @@ a {
 
   .contacts__content {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+
+  .offer h1 {
+    font-size: 47px;
   }
 
   .srv__row {
