@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Обнуление*/
 * {
   padding: 0;
@@ -120,10 +121,19 @@ h3 {
 p {
   font-size: 14px;
   color: #0E7D77;
+  line-height: 130%;
 }
 
 a {
   color: #fff;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
 }
 
 /* ----------------- */
@@ -149,10 +159,17 @@ a {
 .head__list li {
   margin-left: 45px;
   padding-bottom: 7px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+  position: relative;
 }
-.head__list li:hover {
-  border-bottom: 1px solid #fff;
+.head__list li:hover ::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
 }
 .head__list li:first-child {
   margin-left: 0;
@@ -241,7 +258,7 @@ a {
   margin-bottom: 12px;
 }
 .srv__item p {
-  min-height: 100px;
+  min-height: 110px;
 }
 .srv__item a {
   font-size: 18px;
@@ -275,7 +292,7 @@ a {
   background: #F4FFFE;
 }
 .why-me h2 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .why-me h2::after {
   width: 128px;
@@ -284,19 +301,28 @@ a {
 
 .paragraph {
   max-width: 490px;
+  margin-right: 20px;
+}
+.paragraph h3 {
+  font-size: 21px;
 }
 .paragraph p {
   margin: 15px 0 0 30px;
 }
 
+.why-me__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .why-me__img {
-  position: absolute;
-  right: 100px;
-  top: -27px;
-  width: 500px;
-  height: 500px;
-  /* background: url(../img/ruslan1.png) no-repeat; */
-  background-size: 100%;
+  width: 365px;
+  height: 365px;
+  background: url(../img/ruslan.jpg) 0 40% no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  border: 2px solid #398681;
 }
 
 .why-me__reason {
@@ -389,7 +415,7 @@ a {
 }
 
 .prices__block__content {
-  height: 215px;
+  height: 240px;
   padding: 0 16px 0;
   position: relative;
 }
@@ -418,6 +444,10 @@ a {
   overflow: hidden;
   margin-right: 20px;
   align-self: flex-end;
+}
+
+.reviews__slider__cont {
+  position: relative;
 }
 
 .reviews__slider {
@@ -484,6 +514,19 @@ a {
   left: -26px;
   bottom: 0;
   border-radius: 0 0 40px 0;
+}
+
+.reviews__slider__cont .swiper-button-prev::after,
+.reviews__slider__cont .swiper-button-next::after {
+  color: #fff;
+  font-size: 50px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  transition: 0.3s;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.548));
 }
 
 /* ----------------- */
@@ -561,8 +604,16 @@ a {
     margin-top: 60px;
   }
 
+  .srv__item p {
+    min-height: 130px;
+  }
+
   .reason__item__row {
     justify-content: center;
+  }
+
+  .paragraph {
+    max-width: 400px;
   }
 
   .prices__slider {
@@ -579,7 +630,25 @@ a {
     padding-bottom: 80px;
   }
 
-  
+  .reviews__slider__cont .swiper-button-prev,
+.reviews__slider__cont .swiper-button-next {
+    top: auto;
+    bottom: -50px;
+    left: auto;
+  }
+  .reviews__slider__cont .swiper-button-prev::after,
+.reviews__slider__cont .swiper-button-next::after {
+    font-size: 30px;
+  }
+
+  .reviews__slider__cont .swiper-button-prev {
+    right: calc(50% + 50px);
+  }
+
+  .reviews__slider__cont .swiper-button-next {
+    right: calc(50% - 50px);
+  }
+
   .contacts__wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -607,8 +676,28 @@ a {
     min-width: 250px;
     margin-bottom: 30px;
   }
+
+  .why-me__row {
+    flex-direction: column-reverse;
+  }
+
+  .why-me__img {
+    margin-bottom: 20px;
+  }
+
+  .why-me__reason {
+    margin-top: 50px;
+  }
+
+  .review {
+    max-width: 305px;
+  }
 }
 @media (max-width: 666px) {
+  .header {
+    padding-top: 20px;
+  }
+
   .header__burger {
     display: block;
     position: relative;
@@ -670,19 +759,29 @@ a {
     top: 0;
   }
 
-  .menu__list {
+  .head__list {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-top: 30%;
   }
 
-  .menu__list li {
+  .head__list li {
     margin: 0 0 30px 0;
+    margin-left: 0;
     font-size: 25px;
+  }
+  .head__list li:hover ::after {
+    display: none;
   }
 
   .contacts__map {
     display: none;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
