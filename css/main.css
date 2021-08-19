@@ -784,4 +784,43 @@ a {
     max-width: 100%;
     padding: 0 10px;
   }
+
+  .srv__row {
+    justify-content: center;
+  }
+
+  .why-me__reason h3::after {
+    width: 68%;
+    left: calc(50% - 34%);
+  }
+
+  .why-me__img {
+    width: 270px;
+    height: 268px;
+  }
+
+  .prices__slider {
+    justify-content: center;
+  }
+
+  .prices__block {
+    max-width: 70%;
+  }
+
+  .reviews .client__img {
+    margin-right: 0;
+    align-self: auto;
+  }
+
+  .reviews__block {
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    align-self: auto;
+    max-width: 80%;
+  }
 }
